@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+    <main class="presentacion__contenido">
+
+        <div class="seccion__titulo__logo">
+            <div class="presentacion__logo">
+                <img class="Logo" src="./assets/Logo.png" alt="Logotipo">
+            </div>
+
+            <h1 class="presentacion__titulo">
+                REGÍSTRATE
+            </h1>
+
+            <h2 class="presentacion_subtitulo">
+                Ingresa los campos solicitados para crear una cuenta en CETI
+            </h2>
+        </div>
+
+        <form action="#" method="post">
+            <div class="container">
+                <fieldset id="informacion_personal">
+                    <legend>INFORMACIÓN PERSONAL</legend>
+
+
+                    <div class="nombre">
+                        <label id="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Name" required>
+                    </div>
+
+                    <div class="apellido">
+                        <label id="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="LastName" required>
+                    </div>
+
+                    <div class="fecha_nacimiento">
+                        <label id="labelFechaNacimiento" for="fecha-nacimiento">Fecha de Nacimiento</label>
+                        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                    </div>
+
+                    <div class="genero">
+                        <label class="gender">Género:</label>
+                        <div>
+                            <input type="radio" id="masculino" name="genero" value="masculino" required>
+                            <label for="masculino">Masculino</label>
+                            <input type="radio" id="femenino" name="genero" value="femenino" required>
+                            <label for="femenino">Femenino</label>
+                            <input type="radio" id="otro" name="genero" value="otro" required>
+                            <label for="otro">Otro</label>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <fieldset id="informacion_contacto">
+                    <legend>INFORMACIÓN DE CONTACTO</legend>
+
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="example@gmailcom" required>
+                    </div>
+
+                    <div>
+                        <label for="telefono">Celular:</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="5555555555" required>
+                    </div>
+
+                    <label for="direccion">Dirección:</label>
+                    <textarea id="direccion" name="direccion" rows="4"
+                        placeholder="Street Example 2550, Central Park, NYC, ZC: 10024"></textarea>
+
+                </fieldset>
+
+                <fieldset id="informacion_cuenta">
+                    <legend>INFORMACIÓN DE LA CUENTA</legend>
+                    <label for="usuario">Nombre de Usuario:</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="UserName21" required>
+
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" placeholder="" required>
+
+                    <label for="confirmar-contrasena">Confirmar Contraseña:</label>
+                    <input type="password" id="confirmar-contrasena" name="confirmar-contrasena" required>
+                </fieldset>
+
+                <fieldset id="informacion_preferencias">
+                    <legend>PREFERENCIAS</legend>
+                    <label for="color">¿Cuál es tu color favorito?</label>
+                    <select id="color" name="color">
+                        <option value="rojo">Rojo</option>
+                        <option value="azul">Azul</option>
+                        <option value="verde">Verde</option>
+                        <option value="amarillo">Amarillo</option>
+                    </select>
+                </fieldset>
+            </div>
+
+            <div class="termsandconditions">
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos">Acepto Términos y Condiciones</label>
+            </div>
+
+            <div class="submit-btn">
+                <input type="submit" value="REGISTRARSE">
+            </div>
+        </form>
+
+        <footer class="footer">
+            <p>Desarrollado por Brenda Paola Navarro Alatorre</p>
+        </footer>
+
+        <script src="js/script.js"></script>
+    </main>
+</body>
+
+</html>

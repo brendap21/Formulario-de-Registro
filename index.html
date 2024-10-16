@@ -70,37 +70,48 @@
                     </div>
 
                     <div>
-                        <label for="telefono">Celular:</label>
+                        <label for="celular">Celular:</label>
                         <input type="tel" id="telefono" name="telefono" placeholder="5555555555" required>
                     </div>
 
-                    <label for="direccion">Dirección:</label>
-                    <textarea id="direccion" name="direccion" rows="4"
-                        placeholder="Street Example 2550, Central Park, NYC, ZC: 10024"></textarea>
-
+                    <div class="direccionContainer">
+                        <label for="direccion">Dirección:</label>
+                        <textarea id="direccion" name="direccion" rows="4"
+                            placeholder="Street Example 2550, Central Park, NYC, ZC: 10024"></textarea>
+                    </div>
                 </fieldset>
 
                 <fieldset id="informacion_cuenta">
                     <legend>INFORMACIÓN DE LA CUENTA</legend>
-                    <label for="usuario">Nombre de Usuario:</label>
-                    <input type="text" id="usuario" name="usuario" placeholder="UserName21" required>
 
-                    <label for="contrasena">Contraseña:</label>
-                    <input type="password" id="contrasena" name="contrasena" placeholder="" required>
+                    <div class="username">
+                        <label for="usuario">Nombre de Usuario:</label>
+                        <input type="text" id="usuario" name="usuario" placeholder="UserName21" required>
+                    </div>
 
-                    <label for="confirmar-contrasena">Confirmar Contraseña:</label>
-                    <input type="password" id="confirmar-contrasena" name="confirmar-contrasena" required>
+                    <div class="password">
+                        <label for="contrasena">Contraseña:</label>
+                        <input type="password" id="contrasena" name="contrasena" placeholder="********" required>
+                    </div>
+
+                    <div class="confirm_password">
+                        <label for="confirmar-contrasena">Confirmar Contraseña:</label>
+                        <input type="password" id="confirmar-contrasena" name="confirmar-contrasena" placeholder="********" required>
+                    </div>
                 </fieldset>
 
                 <fieldset id="informacion_preferencias">
                     <legend>PREFERENCIAS</legend>
-                    <label for="color">¿Cuál es tu color favorito?</label>
-                    <select id="color" name="color">
-                        <option value="rojo">Rojo</option>
-                        <option value="azul">Azul</option>
-                        <option value="verde">Verde</option>
-                        <option value="amarillo">Amarillo</option>
-                    </select>
+
+                    <div class="preferencias">
+                        <label for="color">¿Cuál es tu color favorito?</label>
+                        <select id="color" name="color">
+                            <option value="rojo">Rojo</option>
+                            <option value="azul">Azul</option>
+                            <option value="verde">Verde</option>
+                            <option value="amarillo">Amarillo</option>
+                        </select>
+                    </div>
                 </fieldset>
             </div>
 

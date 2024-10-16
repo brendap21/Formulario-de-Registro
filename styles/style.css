@@ -6,10 +6,11 @@
     --color-secundario: #343A40;
     --color-terciario: #072B61;
     --color-cuaternario: #F3F5FC;
-    --color-quinteario: #;
+    --color-quinteario: #1f851f;
+    --color-sexteario: #87bdff36;
     --color-hover: #31363F;
 
-    --white: #FFFFFF;
+    --color-white: #FFFFFF;
 
     --fuente-montserrat: 'Montserrat', sans-serif;
     --fuente-krona: 'Krona One', sans-serif;
@@ -22,16 +23,21 @@
 }
 
 body {
+    height: 100vh;
     box-sizing: border-box;
     background-color: var(--color-cuaternario);
     color: var(--color-primario);
+    justify-content: center;
+    align-items: center;
 }
 
 .presentacion__contenido {
     display: flex;
     flex-direction: column;
-    place-items: center;
-    height: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .seccion__titulo__logo {
@@ -56,6 +62,7 @@ body {
 }
 
 .presentacion__titulo {
+    display: flex;
     font-size: 3rem;
     font-family: var(--fuente-krona);
     align-self: center;
@@ -80,11 +87,12 @@ body {
     gap: 5%;
     min-width: 70%;
     max-width: 1200px;
-    margin: 5%;
+    height: m;
+    padding: 5%;
 }
 
 form {
-    background-color: var(--white);
+    background-color: var(--color-white);
     border: 2px solid none;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -92,8 +100,39 @@ form {
     min-width: 70%;
     width: 70%;
     height: 100%;
-    margin-top: 2%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
+    align-content: center;
+}
+
+form legend {
+    font-family: var(--fuente-krona);
+    background-color: var(--color-terciario);
+    color: var(--color-white);
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 3%;
+    padding-left: 3%;
+    display: flex;
+    text-align: right;
+    margin-right: 0%;
+}
+
+form fieldset {
+    border: 2px solid var(--color-terciario);
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 5%;
+    padding-bottom: 6%;
+    border-radius: 8px;
+    font-family: var(--fuente-inter);
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    text-align: center;
+    justify-content: center;
     align-content: center;
 }
 
@@ -103,14 +142,18 @@ form textarea {
     font-size: 1rem;
     font-family: var(--fuente-inter);
     color: var(--color-secundario);
-    margin-bottom: 10px;
-    padding: 2%;
+    margin-top: 2%;
+    padding: 3%;
     width: 100%;
     box-sizing: border-box;
+    border-radius: 5px;
+    background-color: var(--color-sexteario);
+    border: none;
+    justify-content: center;
 }
 
-form input{
-
+form input,
+form select {
     max-width: max-content;
 }
 
@@ -120,93 +163,99 @@ form select:focus {
     border-color: var(--color-terciario);
     outline: none;
     box-shadow: 0 0 5px var(--color-primario);
-}
-
-form fieldset {
-    border: 2px solid var(--color-terciario);
-    padding-left: 4%;
-    padding-right: 4%;
-    padding-top: 8%;
-    padding-bottom: 6%;
-    margin-bottom: 20px;
-    background-color: var(--white);
-    border-radius: 8px;
-    font-family: var(--fuente-inter);
-    display: flex;
-    flex-direction: column;
-    font-weight: 600;
     text-align: center;
 }
-
-form legend {
-    font-family: var(--fuente-krona);
-    font-weight: bold;
-    color: var(--color-terciario);
-    padding: 0 10px;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.fecha_nacimiento, .genero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#fecha-nacimiento {
-    margin-top: 1%;
-}
-
 
 .gender {
     margin-top: 1%;
     margin-bottom: 2%;
 }
 
-label[for="masculino"], 
-label[for="femenino"], 
-label[for="otro"] { 
-    font-weight: 400;
+.fecha_nacimiento,
+.genero,
+.direccionContainer,
+.username,
+.password,
+.confirm_password,
+.preferencias {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.username input::placeholder,
+.password input::placeholder,
+.confirm_password input::placeholder {
+    text-align: center;
+}
 
+#fecha-nacimiento,
+#direccion {
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 0%;
+}
 
+#direccion {
+    height: 100%;
+    resize: none;
+    padding: 3%;
+}
+
+label[for="masculino"],
+label[for="femenino"],
+label[for="otro"] {
+    font-weight: 400;
+}
 
 .termsandconditions {
     grid-column: 1 / -1;
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+
+.termsandconditions input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 2%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0;
 }
 
 label[for="terminos"] {
     font-size: 1.2rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--fuente-montserrat);
     color: var(--color-terciario);
     text-decoration: underline;
     font-weight: bold;
     letter-spacing: 1px;
     cursor: pointer;
     transition: color 0.3s ease, text-decoration 0.3s ease;
+    text-align: center;
 }
 
 /* Estilo cuando el checkbox está seleccionado */
-input[type="checkbox"]:checked + label[for="terminos"] {
-    color: #1f851f; 
-    text-decoration: none; 
-    font-weight: bold; 
+input[type="checkbox"]:checked+label[for="terminos"] {
+    color: var(--color-quinteario);
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* Estilo cuando el checkbox no está seleccionado */
-input[type="checkbox"]:not(:checked) + label[for="terminos"] {
-    color: var(--color-terciario); 
-    text-decoration: underline; 
+input[type="checkbox"]:not(:checked)+label[for="terminos"] {
+    color: var(--color-terciario);
+    text-decoration: underline;
 }
 
 .submit-btn {
     grid-column: 1 / -1;
     display: flex;
     justify-content: center;
-    margin-top: 2%;
+    align-self: center;
     margin-bottom: 2%;
 }
 
@@ -216,7 +265,7 @@ input[type="checkbox"]:not(:checked) + label[for="terminos"] {
     font-size: 1.2rem;
     border: none;
     background-color: var(--color-terciario);
-    color: var(--white);
+    color: var(--color-white);
     cursor: pointer;
     border-radius: 7px;
 }
@@ -240,12 +289,58 @@ input[type="checkbox"]:not(:checked) + label[for="terminos"] {
 
 @media (max-width: 768px) {
     .container {
-        grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        padding: 5%;
+        gap: 2rem; 
+        align-items: center; /* Centra los elementos dentro del contenedor */
+    }
+
+    form {
+        width: 100%;
+        overflow: hidden;
+        align-items: center;
+        padding: 2rem;
+        max-width: 90%; 
+        margin: 0 auto; 
+        justify-content: center;
     }
 
     form input,
     form select,
     form textarea {
-        width: 100%; /* Asegura que los inputs se ajusten completamente a una columna */
+        width: 100%;
+        /* Asegura que los inputs se ajusten completamente a una columna */
+    }
+
+    .termsandconditions,
+    .submit-btn {
+        width: 100%; /* Asegura que el checkbox y el botón ocupen todo el ancho */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1.5rem; /* Añade espacio para evitar que se encimen */
+    }
+    
+    .submit-btn input {
+        width: 100%; /* Asegura que el botón sea responsivo */
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .preferencias {
+        margin-bottom: 3rem; /* Aumenta el espacio inferior */
+    }
+    
+    .termsandconditions {
+        margin-bottom: 2rem; /* Espacio entre los términos y el botón */
+    }
+
+    .footer {
+        padding: 2rem;
+        width: 100%;
+        margin: 2rem auto; /* Centra el footer */
+
     }
 }
